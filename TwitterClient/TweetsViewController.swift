@@ -61,6 +61,11 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.favoritesLabel.text = String(tweet.favoritesCount)
         cell.userName.text = tweet.username.name
         
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .ShortStyle
+        
+        cell.timestamp.text = formatter.stringFromDate(tweet.timestamp!)
+        
         
         return cell
     }

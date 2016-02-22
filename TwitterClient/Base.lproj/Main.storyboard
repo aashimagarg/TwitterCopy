@@ -72,13 +72,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="@firstlast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUV-cu-wsJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@firstlast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUV-cu-wsJ">
                                                     <rect key="frame" x="158" y="8" width="65" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.42852351641414144" green="0.42852351641414144" blue="0.42852351641414144" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd1-Ce-8Cr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd1-Ce-8Cr">
                                                     <rect key="frame" x="293" y="8" width="18.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.42852351640000003" green="0.42852351640000003" blue="0.42852351640000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,7 +149,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="MUi-OD-mcj" secondAttribute="bottom" constant="29.5" id="cKL-pA-nOx"/>
                                                 <constraint firstItem="HS5-bw-tEy" firstAttribute="leading" secondItem="MUi-OD-mcj" secondAttribute="trailing" constant="11" id="dEs-0b-xqf"/>
                                                 <constraint firstItem="MUi-OD-mcj" firstAttribute="leading" secondItem="Md8-iD-UnJ" secondAttribute="trailing" constant="8" id="dOZ-nb-hiZ"/>
-                                                <constraint firstItem="fd1-Ce-8Cr" firstAttribute="leading" secondItem="nUV-cu-wsJ" secondAttribute="trailing" constant="70" id="ded-Im-qQn"/>
+                                                <constraint firstItem="fd1-Ce-8Cr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nUV-cu-wsJ" secondAttribute="trailing" constant="70" id="ded-Im-qQn"/>
                                                 <constraint firstItem="ZWD-dy-uHY" firstAttribute="top" secondItem="cF4-df-cDB" secondAttribute="top" constant="8" id="dxm-Dc-QBc"/>
                                                 <constraint firstItem="HS5-bw-tEy" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="13" id="e6t-jq-uxs"/>
                                                 <constraint firstItem="MUi-OD-mcj" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="17" id="ef3-fy-8DY"/>
