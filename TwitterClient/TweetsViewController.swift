@@ -55,7 +55,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let tweet = tweets[indexPath.row]
         cell.tweetMessage.text = tweet.text
-        cell.screenName.text = tweet.username.screenname
+        cell.screenName.text = "@\(tweet.username.screenname!)"
         cell.profileView.setImageWithURL(tweet.username.profileUrl!)
         cell.retweetLabel.text = String(tweet.retweetCount)
         cell.favoritesLabel.text = String(tweet.favoritesCount)
@@ -66,7 +66,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.timestamp.text = formatter.stringFromDate(tweet.timestamp!)
         
-        
         return cell
     }
     
@@ -76,6 +75,9 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
     }
+    
+       
+   
 
     
     /*

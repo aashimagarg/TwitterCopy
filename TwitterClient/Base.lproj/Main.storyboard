@@ -85,31 +85,32 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YH-Jk-jhK">
-                                                    <rect key="frame" x="81" y="26" width="230.5" height="16"/>
+                                                    <rect key="frame" x="81" y="29" width="230.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IQs-z1-Qfa">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reply-action" translatesAutoresizingMaskIntoConstraints="NO" id="IQs-z1-Qfa">
                                                     <rect key="frame" x="81" y="55" width="18" height="18"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="18" id="Vr1-OR-4Rc"/>
                                                         <constraint firstAttribute="height" constant="18" id="fHX-ii-5Tl"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="BFB-KC-fjI" appends="YES" id="fRM-52-vek"/>
+                                                    </connections>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-iD-UnJ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="retweet-action" translatesAutoresizingMaskIntoConstraints="NO" id="Md8-iD-UnJ">
                                                     <rect key="frame" x="131" y="55" width="18" height="18"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="18" id="Dtz-BF-IlO"/>
                                                         <constraint firstAttribute="height" constant="18" id="Tgz-51-9EX"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HS5-bw-tEy">
-                                                    <rect key="frame" x="181" y="55" width="18" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="18" id="6gz-SC-1IJ"/>
-                                                        <constraint firstAttribute="height" constant="18" id="9SJ-QO-ZBD"/>
-                                                    </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="GaW-Cw-fhf" appends="YES" id="KWI-2F-uv5"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUi-OD-mcj">
                                                     <rect key="frame" x="158" y="59" width="12" height="11"/>
@@ -123,6 +124,17 @@
                                                     <color key="textColor" red="0.42852351640000003" green="0.42852351640000003" blue="0.42852351640000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like-action" translatesAutoresizingMaskIntoConstraints="NO" id="HS5-bw-tEy">
+                                                    <rect key="frame" x="181" y="55" width="18" height="18"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="18" id="6gz-SC-1IJ"/>
+                                                        <constraint firstAttribute="height" constant="18" id="9SJ-QO-ZBD"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="Git-Bo-cgX" appends="YES" id="10g-0V-FHW"/>
+                                                    </connections>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="HS5-bw-tEy" firstAttribute="leading" secondItem="MUi-OD-mcj" secondAttribute="trailing" constant="11" id="0JN-vz-OGh"/>
@@ -131,10 +143,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="5YH-Jk-jhK" secondAttribute="trailing" constant="8.5" id="7XM-8G-DVj"/>
                                                 <constraint firstItem="MUi-OD-mcj" firstAttribute="leading" secondItem="Md8-iD-UnJ" secondAttribute="trailing" constant="9" id="7xK-qy-Z44"/>
                                                 <constraint firstAttribute="bottom" secondItem="gDl-g3-b4p" secondAttribute="bottom" constant="29.5" id="918-hz-29j"/>
-                                                <constraint firstItem="Md8-iD-UnJ" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="13" id="BUx-5C-oVG"/>
-                                                <constraint firstItem="gDl-g3-b4p" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="17" id="BYY-hO-bWI"/>
+                                                <constraint firstItem="Md8-iD-UnJ" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="10" id="BUx-5C-oVG"/>
+                                                <constraint firstItem="gDl-g3-b4p" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="14" id="BYY-hO-bWI"/>
                                                 <constraint firstItem="Md8-iD-UnJ" firstAttribute="leading" secondItem="IQs-z1-Qfa" secondAttribute="trailing" constant="32" id="DDA-vV-vNO"/>
-                                                <constraint firstItem="5YH-Jk-jhK" firstAttribute="top" secondItem="ZWD-dy-uHY" secondAttribute="bottom" id="GEm-Vl-1sm"/>
+                                                <constraint firstItem="5YH-Jk-jhK" firstAttribute="top" secondItem="ZWD-dy-uHY" secondAttribute="bottom" constant="3" id="GEm-Vl-1sm"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="HS5-bw-tEy" secondAttribute="bottom" constant="18.5" id="JL3-Ht-9nj"/>
                                                 <constraint firstItem="5YH-Jk-jhK" firstAttribute="leading" secondItem="ZWD-dy-uHY" secondAttribute="leading" id="LnJ-LU-iGb"/>
                                                 <constraint firstAttribute="bottom" secondItem="HS5-bw-tEy" secondAttribute="bottom" constant="26.5" id="LrG-hC-z4Z"/>
@@ -151,15 +163,15 @@
                                                 <constraint firstItem="MUi-OD-mcj" firstAttribute="leading" secondItem="Md8-iD-UnJ" secondAttribute="trailing" constant="8" id="dOZ-nb-hiZ"/>
                                                 <constraint firstItem="fd1-Ce-8Cr" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nUV-cu-wsJ" secondAttribute="trailing" constant="70" id="ded-Im-qQn"/>
                                                 <constraint firstItem="ZWD-dy-uHY" firstAttribute="top" secondItem="cF4-df-cDB" secondAttribute="top" constant="8" id="dxm-Dc-QBc"/>
-                                                <constraint firstItem="HS5-bw-tEy" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="13" id="e6t-jq-uxs"/>
-                                                <constraint firstItem="MUi-OD-mcj" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="17" id="ef3-fy-8DY"/>
+                                                <constraint firstItem="HS5-bw-tEy" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="10" id="e6t-jq-uxs"/>
+                                                <constraint firstItem="MUi-OD-mcj" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="14" id="ef3-fy-8DY"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="IQs-z1-Qfa" secondAttribute="bottom" constant="18.5" id="gA2-ig-rGE"/>
                                                 <constraint firstItem="gDl-g3-b4p" firstAttribute="leading" secondItem="HS5-bw-tEy" secondAttribute="trailing" constant="8" id="hcB-D4-QAO"/>
                                                 <constraint firstAttribute="trailing" secondItem="fd1-Ce-8Cr" secondAttribute="trailing" constant="8" id="lgb-Uh-sf6"/>
                                                 <constraint firstItem="dNg-ct-zv8" firstAttribute="top" secondItem="cF4-df-cDB" secondAttribute="top" constant="8" id="o1X-Wf-Qdi"/>
                                                 <constraint firstItem="fd1-Ce-8Cr" firstAttribute="top" secondItem="cF4-df-cDB" secondAttribute="top" constant="8" id="sWa-Pp-CQD"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Md8-iD-UnJ" secondAttribute="bottom" constant="18.5" id="seA-ZB-g2y"/>
-                                                <constraint firstItem="IQs-z1-Qfa" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="13" id="sxQ-AO-Tvq"/>
+                                                <constraint firstItem="IQs-z1-Qfa" firstAttribute="top" secondItem="5YH-Jk-jhK" secondAttribute="bottom" constant="10" id="sxQ-AO-Tvq"/>
                                                 <constraint firstItem="nUV-cu-wsJ" firstAttribute="leading" secondItem="ZWD-dy-uHY" secondAttribute="trailing" constant="8.5" id="z4p-B6-HxN"/>
                                             </constraints>
                                             <variation key="default">
@@ -206,6 +218,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7F-tO-IWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GaW-Cw-fhf"/>
+                <tapGestureRecognizer id="Git-Bo-cgX"/>
+                <tapGestureRecognizer id="BFB-KC-fjI"/>
             </objects>
             <point key="canvasLocation" x="1702" y="249"/>
         </scene>
@@ -229,4 +244,9 @@
             <point key="canvasLocation" x="930" y="249.2957746478873"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="like-action" width="54" height="72"/>
+        <image name="reply-action" width="65" height="72"/>
+        <image name="retweet-action" width="75" height="72"/>
+    </resources>
 </document>

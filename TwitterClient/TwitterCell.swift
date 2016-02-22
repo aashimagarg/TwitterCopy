@@ -36,5 +36,12 @@ class TwitterCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+
+    
+    
+    @IBAction func onReply(sender: AnyObject) {
+    }
+    
 
 }
