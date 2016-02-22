@@ -12,7 +12,7 @@ The following **required** functionality is completed:
 - [X] User can view last 20 tweets from their home timeline
 - [X] The current signed in user will be persisted across restarts
 - [X] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
-- [X] Retweeting and favoriting should increment the retweet and favorite count.
+- [] Retweeting and favoriting should increment the retweet and favorite count.
 
 The following **optional** features are implemented:
 
@@ -26,8 +26,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. retweet and favorite count - i was having a lot of trouble creating IBActions from my image views for the retweet, favorite, and reply buttons. had i figured this out, I feel like i would have been able to program their functionality pretty well.
+2. ontap actions (changing button color etc.) 
 
 ## Video Walkthrough 
 
