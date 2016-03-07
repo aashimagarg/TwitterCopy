@@ -105,6 +105,47 @@ class TwitterClient: BDBOAuth1SessionManager {
         NSNotificationCenter.defaultCenter().postNotificationName(User.userDidLogoutNotification, object: nil)
     }
     
+    func retweetWithID(id: Int, completion : (tweet : Tweet?, error: NSError?) -> ()){
+        POST("1.1/statuses/retweet/\(id).json", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response:AnyObject?) -> Void in
+            
+            var array : [NSDictionary] = [NSDictionary]()
+            array.append(response as! NSDictionary)
+            let tweets = Tweet.tweetsWithArray(array)
+            completion(tweet: tweets[0], error: nil)
+            
+            }) { (response: NSURLSessionDataTask?, error: NSError) -> Void in
+                print("there was an error")
+                completion(tweet: nil, error: error)
+        }
+    }
+    
+    func favoriteWithID(id: Int, completion : (tweet : Tweet?, error: NSError?) -> ()){
+        POST("1.1/favorites/create.json?id=\(id)", parameters: nil, progress: nil, success: { (task: NSURLSessionDataTask, response:AnyObject?) -> Void in
+            
+            var array : [NSDictionary] = [NSDictionary]()
+            array.append(response as! NSDictionary)
+            
+            let tweets = Tweet.tweetsWithArray(array)
+            completion(tweet: tweets[0], error: nil)
+            }) {
+                (response: NSURLSessionDataTask?, error: NSError) -> Void in
+                completion(tweet: nil, error: error)
+        }
+
+    }
+    
+    func postTweet(params: NSDictionary, success: (User) -> (), failure: (NSError) -> ()) {
+        POST("1.1/statuses/update.json", parameters: params, progress: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            print("posted successfully")
+            
+            }, failure: { (task: NSURLSessionDataTask?,error: NSError) -> Void in
+                failure(error)
+                print("error, could not get user info")
+        })
+        
+    }
+
+    
     
     
 }

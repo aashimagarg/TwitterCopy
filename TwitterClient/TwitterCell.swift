@@ -15,12 +15,11 @@ class TwitterCell: UITableViewCell {
     @IBOutlet weak var screenName: UILabel!
     @IBOutlet weak var timestamp: UILabel!
     @IBOutlet weak var tweetMessage: UILabel!
-    @IBOutlet weak var replyButton: UIImageView!
-    @IBOutlet weak var retweetButton: UIImageView!
-    @IBOutlet weak var favoriteButton: UIImageView!
     @IBOutlet weak var retweetLabel: UILabel!
     @IBOutlet weak var favoritesLabel: UILabel!
-    
+    @IBOutlet weak var favoritesButton: UIButton!
+    @IBOutlet weak var retweetButton: UIButton!
+    @IBOutlet weak var replyButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,11 +36,18 @@ class TwitterCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-
+    @IBAction func onFavorite(sender: AnyObject) {
+        
+    }
     
+    @IBAction func onRetweet(sender: AnyObject) {
+    }
     
     @IBAction func onReply(sender: AnyObject) {
     }
     
+
+    
+   
 
 }
